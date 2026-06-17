@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Cinzel", serif;
+    background: #ECEDE4;
+    color: black;
+}
+header{
+    /* Afasta o título do btn menu.*/
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    /* centraliza o h1 */
+    justify-content: center;
+    position: relative; 
+
+    font-weight: 400;
+    border-bottom: 1px solid #6E7743;
+    margin: auto;
+    /*Mantém o header aparecendo, mesmo com scroll para o conteúdo.*/
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background-color: #ebece1;
+}
+
+header > h1{
+    margin: 0;
+    /*Corrige a responsividade no celular.*/
+    margin-left: 25px;
+    font-size: 32px;
+    /*Como elemento clicável, melhora a esperiência do usuário.*/
+    cursor: pointer;
+}
+
+section{
+    padding: 40px 60px 50px 85px;
+    /*Limite de largura para melhor experiência, permitindo se ajustar à telas menores, graças ao margin:auto.*/
+    max-width: 1000px;
+    margin: auto;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.banner img{
+    width: 100%;
+    display: block;
+}
+
+.banner h2{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 30px;
+    color: #F4F4F4;
+}
+
+
+h2{
+    color:#6E7743;
+    margin-bottom: 10px;
+}
+
+p{
+    /*Distância de uma linha para outra no parágrafo.*/
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #8B3A2E;
+    color: #F4F4F4;
+    /*Isso remove a linha abaixo do nome do botão*/
+    text-decoration: none;
+}
+
+.menu-btn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    cursor: pointer;
+    /*Garante que o botão fique acima do menu.*/
+    z-index: 1002;
+}
+
+/*Aqui representa o "hamburguer" do menu.*/
+.menu-btn span{
+    display: block;
+    height: 4px;
+    background: #6E7743;
+    margin: 6px 0;
+    border-radius: 9px;
+    transition: 0.4s;
+}
+
+/*Rotaciona a primeira linha para baixo*/
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+/*Esconde a linha do meio*/
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/*Rotaciona a terceira linha para cima*/
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    /*Aqui mantém o menu escondido.*/
+    left: -650px;
+    width: 250px;
+    height: 100%;
+    transition: 0.4s;
+    /*Deixa o menu abaixo do "hamburguer".*/
+    padding-top: 80px;
+    background: #ECEDE4;
+    /*Deixa o menu abaixo do botão (1001 > 1000)*/
+    z-index: 1000;
+}
+
+/*Faz com que o menu seja devolvido à tela.*/
+.menu.active{
+    left: 0;
+    width: 100%;
+}
+
+.menu a{
+    /*Deixa um link abaixo do outro no menu.*/
+    display: block;
+    /*Espaça um do outro abaixo*/
+    padding: 15px;
+    text-decoration: none;
+    color: #2B2B2B;
+    border-bottom: 1px solid #6E7743;
+}
+
+/*No menu, ao passar o mouse nas opções, recebe os atributos abaixo.*/
+.menu a:hover{
+    background: #6E7743;
+    color: #F4F4F4;
+}
+
+footer > p{
+    text-align: center;
+    padding: 5px 5px 0px 5px;
+    border-top: 1px solid #ccc;
+    font-family: "Cinzel", serif;
+}
+
+img{
+    padding: 10px;
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Garante ajustes apenas para telas de celulares e tablets.*/
+@media (max-width: 768px) {
+    section {
+        /* Reduz os recuos laterais de 85px/60px para apenas 20px */
+        /* Isso faz o texto ocupar quase toda a largura e se alinhar mais à esquerda */
+        padding: 30px 20px;
+        width: auto;
+    }
+}
