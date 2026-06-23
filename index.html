@@ -1,10 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <header>
+        <h1>ROGÉRIO TAVARES</h1>
+
+    <!-- Navegação dentro da página principal. -->
+        <nav>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#formacao">Formação</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+         <p id="tema">🌙</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="texto">
+                <p>BEM-VINDO AO MEU</p>
+                <h2>PORTFÓLIO</h2>
+
+                <p>
+                    Sou técnico em telecomunicações
+                    apaixonado por tecnologia.
+                </p>
+            </div>
+
+            <img src="imagens/eu.png" alt="Foto de perfil">
+
+        </section>
+
+        <section id="sobre">
+
+            <h2>Sobre Mim</h2>
+
+            <p>
+                Sou técnico em telecomunicações com experiência
+                em FTTH, configuração de roteadores e fusão
+                de fibra óptica.
+            </p>
+
+        </section>
+
+        <section id="formacao">
+
+            <h2>Formação</h2>
+
+            <ul>
+                <li>Técnico em Telecomunicações</li>
+                <li>HTML e CSS</li>
+                <li>Redes de Computadores</li>
+            </ul>
+
+        </section>
+
+        <section id="portfolio">
+
+            <h2>Portfólio</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <img src="imagens/campus.png">
+
+                    <h3>Projeto 1</h3>
+
+                    <a class="btn" target="_blank" href="https://mapeamento-uesb.netlify.app/">Ver Projeto</a>
+                    <a class="btn" target="_blank" href="https://github.com/Rogerio-Tavares/prot-tipo-campus.git">Código-Fonte</a>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="imagens/cursos.png">
+
+                    <h3>Projeto 2</h3>
+
+                    <a class="btn" target="_blank" href="https://playlistcursos.netlify.app/">Ver Projeto</a>
+                    <a class="btn" target="_blank" href="https://github.com/Rogerio-Tavares/Playlists-Cursos.git">Código-Fonte</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="contato">
+
+            <h2>Contato</h2>
+
+            <form id="formContato">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Seu nome">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Seu e-mail">
+
+                <textarea
+                    id="mensagem"
+                    placeholder="Digite sua mensagem">
+                </textarea>
+
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+
+            </form>
+
+            <p id="resposta"></p>
+
+            <h3>Redes Sociais</h3>
+
+            <a target="_blank" href="https://github.com/Rogerio-Tavares"><img src="imagens/logos/github-30.png" alt="GitHub"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/rogerio-tavares-966b9b241/"><img src="imagens/logos/linkedin-30.png" alt="LinkedIn"></a>
+            <a target="_blank" href="https://www.instagram.com/rogerio_tavares.red/"><img src="imagens/logos/instagram-30.png" alt="Instagram"></a>
+        
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© Portfólio Rogério Tavares</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
