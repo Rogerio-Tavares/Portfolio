@@ -48,7 +48,7 @@ return;
 
 }
 
-// Verfica a validação do e-mail.
+// Acusa invalidade do e-mail.
 const regex =
 /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -68,3 +68,13 @@ resposta.textContent =
 form.reset();
 
 });
+
+// Faz a página recarregar ao clicar no título do header.
+document.addEventListener('DOMContentLoaded', function() {
+    const nome = document.getElementById('nome');
+    nome.addEventListener('click', function() {
+        // Move o scroll para o topo imediatamente após recarregar.
+        window.scrollTo(0, 0);
+        // Redireciona para a própria URL, o que força um estado limpo no histórico.
+        window.location.href = window.location.pathname;
+    })})
